@@ -99,6 +99,7 @@ func TestListAccounts(t *testing.T) {
 		require.NotEmpty(t, account)
 	}
 
+	//timeout case
 	timeoutCtx, cancel := context.WithTimeout(context.Background(), time.Nanosecond)
 	defer cancel()
 	accounts, err = testQueries.ListAccounts(timeoutCtx, arg)
