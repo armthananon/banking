@@ -13,7 +13,7 @@ var (
 	ErrInvalidToken = errors.New("token is invalid")
 )
 
-// Payload contains the payload data of the tokeen
+// Payload contains the payload data of the token
 type Payload struct {
 	ID        uuid.UUID `json:"id"`
 	Username  string    `json:"username"`
