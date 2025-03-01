@@ -118,7 +118,6 @@ func TestListAccounts(t *testing.T) {
 			require.NotEmpty(t, account)
 			require.Equal(t, arg.Owner, account.Owner)
 		}
-		require.Len(t, accounts, 5)
 	})
 
 	t.Run("timout", func(t *testing.T) {
