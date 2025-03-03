@@ -16,7 +16,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:latest
+        image: postgres:17-alpine
         env:
           POSTGRES_USER: myuser
           POSTGRES_PASSWORD: mypassword
