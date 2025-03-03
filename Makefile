@@ -1,5 +1,5 @@
 postgres:
-	docker compose up -d
+	docker run --name postgres --network bank-network -p 5432:5432 -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypassword -d postgres
 
 createdb:
 	docker exec -it postgres createdb --username=myuser --owner=myuser banking
