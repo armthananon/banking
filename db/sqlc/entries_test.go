@@ -21,7 +21,7 @@ func createRandomEntry(t *testing.T, account Account) Entry {
 
 	require.Equal(t, arg.AccountID, entry.AccountID)
 	require.Equal(t, arg.Amount, entry.Amount)
-	require.WithinDuration(t, account.CreateAt, entry.CreatedAt, time.Second)
+	require.WithinDuration(t, account.CreatedAt, entry.CreatedAt, time.Second)
 
 	return entry
 }
