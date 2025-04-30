@@ -24,7 +24,7 @@ type userRespone struct {
 	FullName          string    `json:"full_name"`
 	Email             string    `json:"email"`
 	PasswordChangedAt time.Time `json:"password_changed_at"`
-	CreateAt          time.Time `json:"create_at"`
+	CreatedAt         time.Time `json:"created_at"`
 }
 
 func newUserResponse(user db.User) userRespone {
@@ -33,7 +33,7 @@ func newUserResponse(user db.User) userRespone {
 		FullName:          user.FullName,
 		Email:             user.Email,
 		PasswordChangedAt: user.PasswordChangedAt,
-		CreateAt:          user.CreatedAt,
+		CreatedAt:         user.CreatedAt,
 	}
 }
 
